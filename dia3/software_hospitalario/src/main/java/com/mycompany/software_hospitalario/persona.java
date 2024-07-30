@@ -10,23 +10,28 @@ package com.mycompany.software_hospitalario;
  */
 //class persona
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class persona{
-    private String nombre;
-    private String direccion;
-    private  Date fechanacimiento;
-    private List <Hospital> hospitales;
+    int id;
+    String nombre;
+    String direccion;
+    String nombre_hospital;
     
-    public persona (String nombre,String direccion,Date fechanacimiento){
-            this.nombre= nombre;
-            this.direccion=direccion;
-            this.fechanacimiento = fechanacimiento;
-            this.hospitales= new ArrayList<> ();
+    public persona (int id, String nombre, String direccion, String nombre_hospital) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.nombre_hospital = nombre_hospital;
     }
-    public String getNmobre() {
+    
+      public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public String getNombre() {
         return nombre;
     }
     
@@ -42,11 +47,13 @@ public class persona{
     public void setDireccion(String direccion) {
             this.direccion= direccion;
     }
-    
-    public Date getfechanacimiento (){
-            return fechanacimiento;
+       public String getNombre_hospital() {
+        return nombre_hospital;
     }
-    
-    public void setfechanacimiento(Date fechanacimiento){
-             this.fechanacimiento = fechanacimiento;
+    public void setNombre_hospital(String nombre_hospital) {
+        this.nombre_hospital = nombre_hospital;
+    }
+  
 }
+    
+   
